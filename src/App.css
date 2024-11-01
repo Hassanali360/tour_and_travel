@@ -1,0 +1,450 @@
+/* css of nav bar */
+.NavBar--top--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #54595f;
+  color: #fff;
+}
+
+.NaveBar--cont2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.Links {
+  display: flex;
+  flex-direction: row;
+}
+
+.Links li {
+  list-style: none;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.Links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.chevron--icon {
+  display: none;
+  width: 50px;
+  height: 30px;
+}
+
+.Links a:active {
+  color: blueviolet;
+}
+
+.Web--logo {
+  height: 50px;
+  width: 101px;
+}
+
+/* setting up a media quries for nav bar component */
+@media screen and (max-width: 600px) {
+  .NavBar--top--container {
+    display: block;
+    text-align: left;
+  }
+
+  .NaveBar--cont1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Links li {
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #ffff;
+  }
+
+  .Links {
+    display: block;
+  }
+  .Web--logo {
+    height: 40px;
+    width: 80px;
+  }
+  .chevron--icon {
+    display: block;
+  }
+}
+
+/* now setting header container having a slider image */
+.header--container {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header--image {
+  width: 98vw;
+  height: 600px;
+}
+
+.header--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#iFrameResizer0 {
+  width: 100%;
+  float: left;
+  z-index: 999;
+  height: 186px;
+  overflow: hidden;
+}
+
+.header--text {
+  width: 100%;
+}
+
+/* now setting up a media quries for header section */
+@media screen and (max-width: 600px) {
+  .header--image {
+    width: 75vw;
+    height: 600px;
+  }
+
+  #iFrameResizer0 {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header--image {
+    width: 94vw;
+    height: 600px;
+  }
+
+  #iFrameResizer0 {
+    width: 100%;
+    height: 500px;
+  }
+}
+/* building a top section container having images and names of all the places. */
+.top--section--cont {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(1, 70%);
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  border-radius: 30px;
+  transition: transform 0.1s ease-in;
+}
+
+.cont .cont--heading {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: 36px;
+  font-family: sans-serif;
+  color: #212427;
+  font-style: italic;
+}
+
+.cont--image {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.cont:hover {
+  transform: scale(1.1);
+}
+
+.top--section {
+  text-align: center;
+}
+
+.top--section--heading {
+  color: rgb(74, 74, 212);
+}
+
+.Text--cont .cont--heading {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* now setting  up a media quries for image sections */
+
+@media screen and (max-width: 1484px) {
+  .cont {
+    border-radius: 20px;
+  }
+
+  .cont .cont--heading {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .detailed--description {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 755px) {
+}
+
+/* Destination section css of Adventure */
+.Destination--section--cont {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  column-gap: 40px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.Destination--section--cont .Destination--cont {
+  overflow: hidden;
+  transition: transform 0.1s ease-in;
+}
+
+.Destination--section--cont .cont--image {
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.top--section--heading {
+  margin-bottom: 40px;
+}
+
+.Destination--section--cont .cont--heading {
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: #212427;
+  background-color: skyblue;
+}
+
+/* setting up a meidia quries for Destination section */
+@media screen and (max-width: 755px) {
+  .top--section--cont {
+    margin-top: 50px;
+    grid-template-columns: repeat(1, 80%);
+    grid-template-rows: repeat(3, 50%);
+    row-gap: 45px;
+    margin-bottom: 900px;
+  }
+
+  .cont .cont--heading {
+    font-size: 2rem;
+    margin-top: 50px;
+    letter-spacing: 3px;
+  }
+
+  .top--section--heading {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .detailed--description {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    line-height: 2.5rem;
+  }
+
+  .Destination--section--cont {
+    margin-top: 50px;
+    grid-template-columns: repeat(1, 80%);
+    grid-template-rows: repeat(2, 50%);
+    row-gap: 40px;
+  }
+
+  .Destination--section--cont .cont--heading {
+    font-size: 1.9rem;
+  }
+}
+
+
+
+/* now making a choice component  */
+.choice--section--cont {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(1, 50%);
+  column-gap: 30px;
+  justify-content: center;
+}
+
+.choice--cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.choice--cont span {
+  text-align: center;
+  width: 70px;
+  border-radius: 50%;
+  background-color: hsl(131, 70%, 53%);
+  padding: 10px;
+}
+.choice--img {
+  width: 50px;
+  height: 50px;
+}
+
+.top--section--heading {
+  text-align: center;
+}
+
+/* setting up a media quriies for a choice component */
+@media screen and (max-width: 755px){
+  .choice--section--cont {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(3, 30%);
+    row-gap: 20px;
+  }
+  
+  .choice--cont {
+   padding: 20px;
+  }
+  
+  
+  .top--section--heading {
+    margin-top: 70px;
+  }
+}
+
+/* css of footer */
+.footer--parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 80px 20px 80px;
+  background-color:  #54595f;
+  color: #fff;
+}
+
+.bottom {
+  text-align: center;
+}
+
+.bottom span {
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: italic;
+  color: #012345;
+}
+/* media quries for footer component */
+@media screen and (max-width: 800px){
+  .footer--parent {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(2,30%);
+    row-gap: 50px;
+    column-gap: 10px;
+    padding: 20px 80px 20px 80px;
+    background-color:  #54595f;
+    color: #fff;
+  }
+  
+  .bottom {
+    text-align: center;
+  }
+  
+  .bottom span {
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #012345;
+  }
+}
+/* now setting up a css of contact us page. */
+.contact--heading {
+  font-size: 2rem;
+  color: #012345;
+  text-align: center;
+}
+
+.contact--cont {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.contact--cont1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.Input {
+  font-size: 1rem;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  background-color: rgba(228, 237, 240, 0.747);
+  margin-bottom: 25px;
+  width: 400px;
+  outline: 0;
+  border: 2px solid rgb(104, 146, 160);
+}
+
+.Input:focus {
+  background-color: #fff;
+}
+
+.text-area {
+  height: 200px;
+}
+
+.btn--submit {
+  width: fit-content;
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  background-color: #54595f;
+  border: 2px solid #3b424b;
+  letter-spacing: 2px;
+}
+
+.contact--page {
+  margin-bottom: 50px;
+}
+
+/* setting up a media quries form contact us page */
+@media screen and (max-width: 700px){
+  .contact--heading {
+    font-size: 1.3rem;
+  }
+  
+  .contact--cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Input {
+    font-size: 0.7rem;
+    padding: 7px 15px;
+    width: 350px;
+  }
+  
+  .text-area {
+    height: 100px;
+  }
+  
+  .btn--submit {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+}
